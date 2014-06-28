@@ -3,7 +3,7 @@
   <div class="tab-content">
     <div class="tab-pane" 
          ng-repeat="tab in tabs" 
-         ng-class="{active: tab.active}"
+         ng-class="{active: tab.active, in: fade && tab.active, fade: fade}"
          tab-content-transclude="tab">
     </div>
   </div>

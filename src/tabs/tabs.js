@@ -74,6 +74,10 @@ angular.module('ui.bootstrap.tabs', [])
       <tab heading="Justified Tab 1"><b>First</b> Justified Content!</tab>
       <tab heading="Justified Tab 2"><i>Second</i> Justified Content!</tab>
     </tabset>
+    <tabset fade="true">
+      <tab heading="Fading Tab 1"><b>First</b> Faded Content!</tab>
+      <tab heading="Fading Tab 2"><i>Second</i> Faded Content!</tab>
+    </tabset>
   </file>
 </example>
  */
@@ -90,6 +94,7 @@ angular.module('ui.bootstrap.tabs', [])
     link: function(scope, element, attrs) {
       scope.vertical = angular.isDefined(attrs.vertical) ? scope.$parent.$eval(attrs.vertical) : false;
       scope.justified = angular.isDefined(attrs.justified) ? scope.$parent.$eval(attrs.justified) : false;
+      scope.fade = angular.isDefined(attrs.fade) ? scope.$parent.$eval(attrs.fade) : false;
     }
   };
 })
